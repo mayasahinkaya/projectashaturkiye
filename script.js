@@ -30,6 +30,10 @@ if (menuToggle && siteNav) {
 
 applyLanguage(currentLanguage);
 
+if (document.querySelector('.events-area')) {
+  document.querySelector('.events-area .edit-note')?.remove();
+}
+
 document.querySelectorAll('a[href="https://instagram.com"]').forEach((link) => {
   link.href = 'https://www.instagram.com/project.asha.turkiye/';
 });
