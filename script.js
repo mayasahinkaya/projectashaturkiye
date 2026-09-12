@@ -1,4 +1,6 @@
-import('https://esm.sh/@vercel/analytics@2.0.1').then(({ inject }) => inject());
+// Vercel Analytics - properly installed via npm
+import { inject } from '@vercel/analytics';
+inject();
 
 const savedLanguage = localStorage.getItem('asha-language') || 'en';
 let currentLanguage = savedLanguage;
