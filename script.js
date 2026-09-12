@@ -30,6 +30,14 @@ if (menuToggle && siteNav) {
 
 applyLanguage(currentLanguage);
 
+const currentYear = new Date().getFullYear().toString();
+document.querySelectorAll('.empty-calendar b').forEach((year) => {
+  year.textContent = currentYear;
+});
+document.querySelectorAll('.footer-right span').forEach((copyright) => {
+  copyright.textContent = copyright.textContent.replace(/©\s*\d{4}/, `© ${currentYear}`);
+});
+
 if (document.querySelector('.events-area')) {
   document.querySelector('.events-area .edit-note')?.remove();
 }
