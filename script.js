@@ -67,6 +67,15 @@ document.querySelectorAll('.footer-right').forEach((footer) => {
     linkedIn.textContent = 'LinkedIn ↗';
     footer.insertBefore(linkedIn, footer.querySelector('span'));
   }
+
+  if (!footer.querySelector('a[href="https://www.project-asha.com/get-involved"]')) {
+    const mainProject = document.createElement('a');
+    mainProject.href = 'https://www.project-asha.com/get-involved';
+    mainProject.target = '_blank';
+    mainProject.rel = 'noreferrer';
+    mainProject.textContent = 'Main Project A.S.H.A. website ↗';
+    footer.insertBefore(mainProject, footer.querySelector('span'));
+  }
 });
 
 const revealItems = document.querySelectorAll('.reveal, .work-list article, .team-card, .apply-grid > div');
